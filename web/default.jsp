@@ -53,8 +53,7 @@
 	</head>
         
         <%
-                //upasser = request.getParameter("uname");
-                //ppasser = request.getParameter("passwd");
+                
 	%>
 	
 	<%-- START of body... the option to view the menu is presented to the user --%> 
@@ -69,13 +68,38 @@
         
         <%
                 login L = new login();
-                String upasser = "stubuser";
-                String ppasser = "stubpass";
+                
+                String upasser = " ";
+                String ppasser = " ";
+                upasser = request.getParameter("uname");
+                ppasser = request.getParameter("passwd");
+                if(upasser==null){upasser="stubuser";}
+                if(ppasser==null){ppasser="stubpass";}
                 L.setUserName(upasser);
                 L.setPassWord(ppasser);
+                
+                String uAuth = L.loginUser();
+                String uPass = L.loginPass();
+                
+                if(upasser.equals(uAuth) && ppasser.equals(uPass)){
 	%>
+                <form action = "welcome.jsp" method = "post">
+					<p> You are authorized... Please proceed/><br>
+                                            <input type = "submit" value = "Login">
+					</p>
+                </form>
+        
+        <%
+                }else{
+        %>
+	        <p> You are not authorized... Please login again...></p>   
+        <%
+                }
+        %>
         
             <p>Greeting: <%= L.greetUser() %></p>
+            <p>Login User: <%= L.loginUser() %></p>
+            <p> </p>
         
         </body>
 

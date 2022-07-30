@@ -15,6 +15,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import com.mysql.jdbc.Driver;
+import java.util.ArrayList;
+import java.util.List;
 /**
  *
  * @author seanb
@@ -24,27 +26,40 @@ import com.mysql.jdbc.Driver;
 public class login {
     private String userName = "";
     private String passWD = "";
+    private String loginUser = " ";
+    private String loginPassword = " ";
 
     /**
      * Creates a new instance of login
      */
-    public login() throws SQLException, ClassNotFoundException {
-        System.out.println("Created LOGIN instance..."); 
-                        String userDB = "root";
-			String pwdDB = "admin";
-			String DBconnectURL = "jdbc:mysql://localhost:3307/menu_schema?";
+    
+    private String userDB = "root";
+    private String pwdDB = "admin";
+    private String DBconnectURL = "jdbc:mysql://localhost:3307/menu_schema?";
+    
+    private Connection DBconnection = null;
+    private PreparedStatement SecurityPrep = null;
+    private ResultSet SecurityResult = null;
+    
+    String[] uIDS = new String[3];
+    String[] pIDS = new String[3];
+    List<String[]> credlist = new ArrayList<>();
 			
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection DBconnection = null;
-			PreparedStatement SecurityPrep = null;
-			ResultSet SecurityResult = null;
-                        
+    
+    public login() throws SQLException, ClassNotFoundException {
+                        System.out.println("Created LOGIN instance...");   
+                        Class.forName("com.mysql.jdbc.Driver");
                         // Establishing connection to database using properties supplied
                         DBconnection = DriverManager.getConnection(DBconnectURL, userDB, pwdDB);
                         // Basic query for pulling data for menu - packaged for use by mySQL
                         SecurityPrep = DBconnection.prepareStatement("select * from security;");
                         // Execution of the query for pulling of data to be use for use from running memory during session
                         SecurityResult = SecurityPrep.executeQuery();
+                        
+                        while(SecurityResult.next()){
+                            ///String userExtract = SecurityResult.getString("username");
+                            ///credlist.add(new String[]{userExtract});
+                        }
     }
     
     public String getUserName() {
@@ -60,11 +75,25 @@ public class login {
     }
     
     public void setPassWord(String passWD) {
-        this.passWD = userName.trim();
+        this.passWD = passWD.trim();
     }
      
     public String greetUser() {
-        return "greeting" + " " + userName + " " + passWD;
+        return "Greeting:" + " " + userName + " " + passWD;
+    }
+    
+    public String loginUser()throws SQLException, ClassNotFoundException{
+        ///for (int i = 0; i < credlist.size(); i++) {
+            ///if(credlist.get(i)){
+                                                                                        ////Stringbuilder from Menu instead of LIST
+            ////}
+        ///}
+        
+        return loginUser;
+    }
+    
+    public String loginPass(){
+        return loginPassword;
     }
 }
     
