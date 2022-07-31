@@ -26,8 +26,15 @@ import java.util.List;
 public class login {
     private String userName = "";
     private String passWD = "";
-    private String loginUser = " ";
-    private String loginPassword = " ";
+    
+    private String Manager = " ";
+    private String Manager1 = " ";
+    private String Manager2 = " ";
+    
+    private String dbfounduser = " ";
+    private String dbfoundPassword = " ";
+    private String authuser = " ";
+    private String authpassword = " ";
 
     /**
      * Creates a new instance of login
@@ -41,10 +48,7 @@ public class login {
     private PreparedStatement SecurityPrep = null;
     private ResultSet SecurityResult = null;
     
-    String[] uIDS = new String[3];
-    String[] pIDS = new String[3];
-    List<String[]> credlist = new ArrayList<>();
-			
+    
     
     public login() throws SQLException, ClassNotFoundException {
                         System.out.println("Created LOGIN instance...");   
@@ -55,11 +59,6 @@ public class login {
                         SecurityPrep = DBconnection.prepareStatement("select * from security;");
                         // Execution of the query for pulling of data to be use for use from running memory during session
                         SecurityResult = SecurityPrep.executeQuery();
-                        
-                        while(SecurityResult.next()){
-                            ///String userExtract = SecurityResult.getString("username");
-                            ///credlist.add(new String[]{userExtract});
-                        }
     }
     
     public String getUserName() {
@@ -82,18 +81,21 @@ public class login {
         return "Greeting:" + " " + userName + " " + passWD;
     }
     
-    public String loginUser()throws SQLException, ClassNotFoundException{
-        ///for (int i = 0; i < credlist.size(); i++) {
-            ///if(credlist.get(i)){
-                                                                                        ////Stringbuilder from Menu instead of LIST
-            ////}
-        ///}
+    public void loginUser() throws SQLException, ClassNotFoundException{ 
         
-        return loginUser;
+        while(SecurityResult.next()){
+                dbfounduser = SecurityResult.getString("username");
+                dbfoundPassword = SecurityResult.getString("password");
+                if(userName.equals(dbfounduser) && passWD.equals(dbfoundPassword)){
+                    authuser="YES";
+                }else{
+                    authuser="NO";
+                }
+        }
     }
     
-    public String loginPass(){
-        return loginPassword;
+    public String alloweduser(){
+        return authuser;
     }
 }
     

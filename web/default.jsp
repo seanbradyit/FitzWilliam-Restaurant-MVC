@@ -71,35 +71,33 @@
                 
                 String upasser = " ";
                 String ppasser = " ";
+                String approver = "YES";
+                String result = " ";
                 upasser = request.getParameter("uname");
                 ppasser = request.getParameter("passwd");
                 if(upasser==null){upasser="stubuser";}
                 if(ppasser==null){ppasser="stubpass";}
                 L.setUserName(upasser);
                 L.setPassWord(ppasser);
+                L.loginUser();
+                result = L.alloweduser();
                 
-                String uAuth = L.loginUser();
-                String uPass = L.loginPass();
-                
-                if(upasser.equals(uAuth) && ppasser.equals(uPass)){
+                if(result.equals(approver)){
 	%>
                 <form action = "welcome.jsp" method = "post">
-					<p> You are authorized... Please proceed/><br>
-                                            <input type = "submit" value = "Login">
+					<p> Authorized - Please proceed<br>
+                                            <input type = "submit" value = "Welcome">
 					</p>
                 </form>
         
         <%
                 }else{
         %>
-	        <p> You are not authorized... Please login again...></p>   
+	        <form action = "default.jsp" method = "post">
+					<p>Unauthorized - Please login</p>
+                </form>   
         <%
                 }
         %>
-        
-            <p>Greeting: <%= L.greetUser() %></p>
-            <p>Login User: <%= L.loginUser() %></p>
-            <p> </p>
-        
         </body>
 
