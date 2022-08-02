@@ -78,7 +78,7 @@ public class login {
     }
      
     public String greetUser() {
-        return "Greeting:" + " " + userName + " " + passWD;
+        return "Greeting:" + " " + userName + " ";
     }
     
     public void loginUser() throws SQLException, ClassNotFoundException{ 
