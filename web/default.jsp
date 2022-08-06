@@ -86,8 +86,8 @@
                     String approved = L.getUserName();
 	%>
                 <form action = "welcome.jsp" method = "post">
-					<p> Authorized - Please proceed<br>
-                                            <input type="hidden" name="session" value="<%=approved%>">
+					<p> Login <br>
+                                            <input type="hidden" name="mysession" value="<%=approved%>">
                                             <input type = "submit" value = "Welcome">
 					</p>
                 </form>

@@ -27,14 +27,15 @@ public class login {
     private String userName = "";
     private String passWD = "";
     
-    private String Manager = " ";
-    private String Manager1 = " ";
-    private String Manager2 = " ";
+    private String Manager = "Manager";
+    private String Manager1 = "Jon";
+    private String ManagerP = "password";
+    private String Manager1P = "jon";
+    
     
     private String dbfounduser = " ";
     private String dbfoundPassword = " ";
     private String authuser = " ";
-    private String authpassword = " ";
 
     /**
      * Creates a new instance of login
@@ -82,15 +83,31 @@ public class login {
     }
     
     public void loginUser() throws SQLException, ClassNotFoundException{ 
-        
-        while(SecurityResult.next()){
-                dbfounduser = SecurityResult.getString("username");
-                dbfoundPassword = SecurityResult.getString("password");
-                if(userName.equals(dbfounduser) && passWD.equals(dbfoundPassword)){
-                    authuser="YES";
-                }else{
-                    authuser="NO";
-                }
+        //while(SecurityResult.next()){
+        if(SecurityResult.absolute(1)){
+                    dbfounduser = SecurityResult.getString("username");
+                    dbfoundPassword = SecurityResult.getString("password");
+                    if(userName.equals(dbfounduser) && passWD.equals(dbfoundPassword)){ 
+                        userName = dbfounduser; passWD = dbfoundPassword; authuser="YES";
+                    }else{
+                        if(SecurityResult.absolute(2)){
+                                    dbfounduser = SecurityResult.getString("username");
+                                    dbfoundPassword = SecurityResult.getString("password");
+                                    if(userName.equals(dbfounduser) && passWD.equals(dbfoundPassword)){ 
+                                        userName = dbfounduser; passWD = dbfoundPassword; authuser="YES";
+                                    }else{
+                                        if(SecurityResult.absolute(3)){
+                                                    dbfounduser = SecurityResult.getString("username");
+                                                    dbfoundPassword = SecurityResult.getString("password");
+                                                    if(userName.equals(dbfounduser) && passWD.equals(dbfoundPassword)){ 
+                                                        userName = dbfounduser; passWD = dbfoundPassword; authuser="YES";
+                                                    }else{
+                                                        authuser="NO";
+                                                    }
+                                        }
+                                    }
+                        }
+                    }
         }
     }
     
