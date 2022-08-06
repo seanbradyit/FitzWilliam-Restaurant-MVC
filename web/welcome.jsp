@@ -25,12 +25,14 @@
                 <%
                 if(token!=null){
                     %>
-                            <form action = "welcome.jsp" method = "post">
-                                                    <p> Authorized - Please proceed<br>
+                                                    <p>
                                                     <h1>Welcome: <%= token %> </h1>
-                                                        <input type = "submit" value = "Welcome">
+                                                    <a href="stub-calc.jsp">Restaurant Bill Calculator</a><br>
+                                                    <a href="stub-calc.jsp">Restaurant Reservations</a><br>
+                                                    <a href="stub-calc.jsp">Menu</a><br>
+                                                    <a href="default.jsp">Logout</a><br>
                                                     </p>
-                            </form>
+                            
 
                 <%
                 }else{
