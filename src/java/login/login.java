@@ -36,6 +36,8 @@ public class login {
     private String dbfounduser = " ";
     private String dbfoundPassword = " ";
     private String authuser = " ";
+    
+    private String dbpointer = "";
 
     /**
      * Creates a new instance of login
@@ -52,7 +54,7 @@ public class login {
     
     
     public login() throws SQLException, ClassNotFoundException {
-                        System.out.println("Created LOGIN instance...");   
+                        System.out.println("Created Security table LOGIN instance...");   
                         Class.forName("com.mysql.jdbc.Driver");
                         // Establishing connection to database using properties supplied
                         DBconnection = DriverManager.getConnection(DBconnectURL, userDB, pwdDB);

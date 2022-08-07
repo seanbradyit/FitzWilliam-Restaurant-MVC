@@ -12,6 +12,7 @@
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/Restaurant/*</url-pattern>
+        <url-pattern>/RestaurantMenu/*</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

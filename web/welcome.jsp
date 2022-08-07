@@ -27,9 +27,9 @@
                     %>
                                                     <p>
                                                     <h1>Welcome: <%= token %> </h1>
-                                                    <a href="stub-calc.jsp">Restaurant Bill Calculator</a><br>
-                                                    <a href="stub-calc.jsp">Restaurant Reservations</a><br>
-                                                    <a href="stub-calc.jsp">Menu</a><br>
+                                                    <a href="not-404.jsp">Restaurant Bill Calculator</a><br>
+                                                    <a href="http://localhost:8084/Reservation.jsp">Restaurant Reservations</a><br>
+                                                    <a href="http://localhost:8084/RestaurantMenu/Menu">Menu</a><br>
                                                     <a href="default.jsp">Logout</a><br>
                                                     </p>
                             
