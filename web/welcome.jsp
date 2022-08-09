@@ -30,7 +30,12 @@
                                                     <a href="not-404.jsp">Restaurant Bill Calculator</a><br>
                                                     <a href="http://localhost:8084/Reservation.jsp">Restaurant Reservations</a><br>
                                                     <a href="http://localhost:8084/RestaurantMenu/Menu">Menu</a><br>
-                                                    <a href="default.jsp">Logout</a><br>
+                                                    <form action = "default.jsp" method = "post">
+                                                            <label><input type = "submit" value = "Logout" /></label>
+                                                            <%  
+                                                                token = null;
+                                                            %>
+                                                    </form>
                                                     </p>
                 <%
                 }else{
