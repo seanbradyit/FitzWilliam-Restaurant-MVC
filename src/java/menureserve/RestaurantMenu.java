@@ -9,9 +9,9 @@ package menureserve;
 
 import javax.servlet.*; // class imported for servlet & runtime environment communication
 import javax.servlet.http.*; // class imported for servlet & HTTP communication
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServlet; // class imported to handle servlet requests and responses
+import javax.servlet.http.HttpServletRequest; // class imported to handle servlet requests and responses
+import javax.servlet.http.HttpServletResponse; // class imported to handle servlet requests and responses
 import java.io.*; // class imported for standard I/O functionality
 import javax.servlet.annotation.WebServlet; // class imported for servlet declaration and processing
 import java.text.*; // class imported for data processing
