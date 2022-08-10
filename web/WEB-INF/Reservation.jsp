@@ -60,10 +60,12 @@
 	
 	<%-- START of body... the option to view the menu is presented to the user --%> 
 	<body>
-		<form action = "/RestaurantMenu/Menu" method = "post">
-						If you would would like to return to our menu...
-						<label><input type = "submit" value = "Show the menu" /></label>
-		</form>
+            <%
+		//<form action = "/RestaurantMenu/Menu" method = "post">
+		//				If you would would like to return to our menu...
+		//				<label><input type = "submit" value = "Show the menu" /></label>
+		//</form>
+            %>
 		
 		<%
 			// variables created to store user entries during login attempt with comparison variables created also...
