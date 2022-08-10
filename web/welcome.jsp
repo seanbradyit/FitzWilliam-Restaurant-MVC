@@ -22,7 +22,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Welcome Page</title>
     </head>
-                <%
+                <% // if there is a successfully logged in user then...
                 if(token!=null){
                     %>
                                                     <p>
@@ -38,7 +38,7 @@
                                                     </form>
                                                     </p>
                 <%
-                }else{
+                }else{// Otherwise show the below...
                     %>
                             <form action = "default.jsp" method = "post">
                                                     <p>Unauthorized - Please login</p>
