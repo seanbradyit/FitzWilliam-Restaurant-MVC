@@ -67,23 +67,23 @@
 	
         
         <%
-                login L = new login();
+                login L = new login(); // create new login instance
                 
-                String upasser = " ";
-                String ppasser = " ";
-                String approver = "YES";
-                String result = " ";
-                upasser = request.getParameter("uname");
-                ppasser = request.getParameter("passwd");
-                if(upasser==null){upasser="stubuser";}
-                if(ppasser==null){ppasser="stubpass";}
-                L.setUserName(upasser);
-                L.setPassWord(ppasser);
-                L.loginUser();
-                result = L.alloweduser();
+                String upasser = " "; // create stub String entry for transient container
+                String ppasser = " "; // create stub String entry for transient container
+                String approver = "YES"; // create stub String entry for transient container
+                String result = " "; // create stub String entry for transient container
+                upasser = request.getParameter("uname"); // sourcing the username entered
+                ppasser = request.getParameter("passwd"); // sourcing the password entered
+                if(upasser==null){upasser="stubuser";} // if the entry is empty, set to stub entry
+                if(ppasser==null){ppasser="stubpass";} // if the entry is empty, set to stub entry
+                L.setUserName(upasser); // set the entered username to the username internal variable
+                L.setPassWord(ppasser); // set the entered password to the username internal variable
+                L.loginUser(); // confirm if login attempt is valid
+                result = L.alloweduser(); // return the verification check as a string within the result variable
                 
-                if(result.equals(approver)){
-                    String approved = L.getUserName();
+                if(result.equals(approver)){ // if the result is the same as the approver string then login is allowed, once allowed show the following...
+                    String approved = L.getUserName(); // collect the approver user name and contain in string variable to be used as token
 	%>
                 <form action = "welcome.jsp" method = "post">
 					<p> Login <br>

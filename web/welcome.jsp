@@ -9,6 +9,8 @@
 <!DOCTYPE html>
 
     <% 
+        // Also the above import="login.login" package is security module requested accommodating login operations
+        //    
         // Code is here for cookie implementation but had to develop my own solution as servlet wasn't used hence why standard cookie creation wasn't working...
         // ------------------------------------------------------------------------------//
         ///Cookie mysession = new Cookie("mysession", request.getParameter("mysession"));
