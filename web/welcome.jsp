@@ -29,7 +29,7 @@
                     %>
                                                     <p>
                                                     <h1>Welcome: <%= token %> </h1>
-                                                    <a href="not-404.jsp">Restaurant Bill Calculator</a><br>
+                                                    <a href="BillCalculator.jsp">Restaurant Bill Calculator</a><br>
                                                     <a href="http://localhost:8084/Reservation.jsp">Restaurant Reservations</a><br>
                                                     <a href="http://localhost:8084/RestaurantMenu/Menu">Menu</a><br>
                                                     <form action = "default.jsp" method = "post">

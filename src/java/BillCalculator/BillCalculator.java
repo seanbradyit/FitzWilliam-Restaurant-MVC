@@ -68,15 +68,34 @@ public class BillCalculator {
    private PreparedStatement myStatement;
    private ResultSet myResultSet;
    
+   // declare instance variable ArrayList to hold menu items
+   private ArrayList menuItems = new ArrayList();
    // declare instance variable ArrayList to hold bill items
    private ArrayList billItems = new ArrayList();
    
-   public BillCalculator( 
-      String databaseUserName, String databasePassword )
-   {
-      createUserInterface(); // set up GUI  
+   //DB extract constant
+   private static int limit = 28;
+   
+   // Creds and URL for DB connection
+   private String userDB = "root";
+   private String pwdDB = "admin";
+   private String DBconnectURL = "jdbc:mysql://localhost:3307/menu_schema?";
+   
+   public BillCalculator() throws SQLException, ClassNotFoundException{
+      //createUserInterface(); // set up GUI  
 
       // TODO: code to connect to the database
+                        System.out.println("Created Pricing table instance...");   
+                        Class.forName("com.mysql.jdbc.Driver");
+                        // Establishing connection to database using properties supplied
+                        myConnection = DriverManager.getConnection(DBconnectURL, userDB, pwdDB);
+                        // Basic query for pulling data for menu - packaged for use by mySQL
+                        myStatement = myConnection.prepareStatement("select menu_description from menu;");
+                        // Execution of the query for pulling of data to be use for use from running memory during session
+                        myResultSet = myStatement.executeQuery();
+                        while(myResultSet.next()){
+                            menuItems.add(myResultSet.getString("menu_description"));
+                        }
 
    } // end constructor
    
@@ -84,6 +103,12 @@ public class BillCalculator {
    private void createUserInterface()
    {
        
+   }
+   
+   // test to return output from DB extraction...
+   private ArrayList<String> ShowSelection()
+   {
+       return menuItems;
    }
    
    // **** TODO ****** set up waiterJPanel
