@@ -106,9 +106,12 @@ public class BillCalculator {
    }
    
    // test to return output from DB extraction...
-   public ArrayList<String> ShowSelection()
+   public void ShowSelection() throws SQLException
    {
-       return menuItems;
+       //return menuItems;
+       for(int i = 0; i < 28; i++){
+           myResultSet.getString(i);
+       }
    }
    
    // **** TODO ****** set up waiterJPanel
