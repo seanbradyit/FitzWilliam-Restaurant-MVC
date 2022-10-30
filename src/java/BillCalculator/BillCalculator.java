@@ -110,7 +110,7 @@ public class BillCalculator {
    {
        //return menuItems;
        for(int i = 0; i < 28; i++){
-           menuItems.get(i);
+           System.out.println("Menu entry... " + menuItems.get(i));
        }
    }
    
