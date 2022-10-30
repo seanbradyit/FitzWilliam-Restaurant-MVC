@@ -106,7 +106,7 @@ public class BillCalculator {
    }
    
    // test to return output from DB extraction...
-   private ArrayList<String> ShowSelection()
+   public ArrayList<String> ShowSelection()
    {
        return menuItems;
    }
