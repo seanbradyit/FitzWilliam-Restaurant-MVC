@@ -69,17 +69,19 @@ public class BillCalculator {
    private ResultSet myResultSet;
    
    // declare instance variable ArrayList to hold menu items
-   private ArrayList menuItems = new ArrayList();
+   private ArrayList<String> menuItems = new ArrayList();
    // declare instance variable ArrayList to hold bill items
-   private ArrayList billItems = new ArrayList();
+   private ArrayList<String> billItems = new ArrayList();
    
-   //DB extract constant
-   private static int limit = 28;
+   //DB extract limit and iterator variable
+   private int limit = 27;
+   private int pullcounter = 0;
    
    // Creds and URL for DB connection
    private String userDB = "root";
    private String pwdDB = "admin";
    private String DBconnectURL = "jdbc:mysql://localhost:3307/menu_schema?";
+   
    
    public BillCalculator() throws SQLException, ClassNotFoundException{
       //createUserInterface(); // set up GUI  
@@ -94,7 +96,10 @@ public class BillCalculator {
                         // Execution of the query for pulling of data to be use for use from running memory during session
                         myResultSet = myStatement.executeQuery();
                         while(myResultSet.next()){
-                            menuItems.add(myResultSet.getString("menu_description"));
+                            pullcounter+=1;
+                            if(pullcounter<=limit){
+                                menuItems.add(myResultSet.getString("menu_description"));
+                            }
                         }
 
    } // end constructor
@@ -106,12 +111,14 @@ public class BillCalculator {
    }
    
    // test to return output from DB extraction...
-   public void ShowSelection()
+   public String ShowSelection(int index)
    {
        //return menuItems;
-       for(int i = 0; i < 28; i++){
-           System.out.println("Menu entry... " + menuItems.get(i));
-       }
+       //for(int i = 0; i < 28; i++){
+           //System.out.println("Menu entry... " + menuItems.get(i));
+           return menuItems.get(index);
+       //}
+       //return null;
    }
    
    // **** TODO ****** set up waiterJPanel
