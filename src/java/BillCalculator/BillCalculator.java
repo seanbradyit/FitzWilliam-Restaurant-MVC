@@ -96,22 +96,12 @@ public class BillCalculator {
                         // Execution of the query for pulling of data to be use for use from running memory during session
                         myResultSet = myStatement.executeQuery();
                         while(myResultSet.next()){
-                            pullcounter+=1;
-                            if(pullcounter<=limit){
                                 menuItems.add(myResultSet.getString("menu_description"));
-                            }
                         }
 
    } // end constructor
    
-   // create and position GUI components; register event handlers
-   private void createUserInterface()
-   {
-       
-   }
-   
-   // test to return output from DB extraction...
-   public String ShowSelection(int index)
+   public String ShowSelectionMenu(int index)
    {
        //return menuItems;
        //for(int i = 0; i < 28; i++){
