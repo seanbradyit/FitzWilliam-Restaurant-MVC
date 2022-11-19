@@ -92,11 +92,12 @@ public class BillCalculator {
                         // Establishing connection to database using properties supplied
                         myConnection = DriverManager.getConnection(DBconnectURL, userDB, pwdDB);
                         // Basic query for pulling data for menu - packaged for use by mySQL
-                        myStatement = myConnection.prepareStatement("select menu_description from menu;");
+                        myStatement = myConnection.prepareStatement("select menu_description, menu_price from menu;");
                         // Execution of the query for pulling of data to be use for use from running memory during session
                         myResultSet = myStatement.executeQuery();
                         while(myResultSet.next()){
                                 menuItems.add(myResultSet.getString("menu_description"));
+                                billItems.add(myResultSet.getString("menu_price"));
                         }
 
    } // end constructor
@@ -107,6 +108,16 @@ public class BillCalculator {
        //for(int i = 0; i < 28; i++){
            //System.out.println("Menu entry... " + menuItems.get(i));
            return menuItems.get(index);
+       //}
+       //return null;
+   }
+   
+   public String SourcePrices(int index)
+   {
+       //return menuItems;
+       //for(int i = 0; i < 28; i++){
+           //System.out.println("Menu entry... " + menuItems.get(i));
+           return billItems.get(index);
        //}
        //return null;
    }
