@@ -13,16 +13,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        
-        <script>
-            function myFunction(){
-                if(document.getElementById(menu0).checked==true){
-                    alert("Value: " + document.getElementById(menu0));
-                }
-            }
-        </script>
     </head>
     <body>
+        <script>
+            function myFunction(){
+                    alert("Value: " + document.getElementById(menu0));
+            }
+        </script>
         <h1>Welcome to the Bill Calculator Application</h1>
         
                                 <%-- Initial reservations are shown in table format --%>
