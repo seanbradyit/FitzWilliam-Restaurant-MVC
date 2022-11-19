@@ -15,7 +15,11 @@
         <title>JSP Page</title>
         
         <script>
-            
+            function myFunction(){
+                if(document.getElementById(menu0).checked==true){
+                    alert("Value: " + document.getElementById(menu0));
+                }
+            }
         </script>
     </head>
     <body>
@@ -81,6 +85,6 @@
                                     <label for="menu26"><%out.print(b.ShowSelectionMenu(26));%></label><br>
                                     <input type="submit" value="Submit">
                                 </form>
-        
+        <button onclick="myFunction()">Calculate Menu</button>
     </body>
 </html>
