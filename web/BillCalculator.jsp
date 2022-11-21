@@ -16,7 +16,7 @@
     </head>
     <script>
             function myFunction(){
-                alert("Value: ");
+                alert("Value: " + document.getElementbyId("menu0").innerText);
             }
     </script>
     
