@@ -26,40 +26,40 @@
                 subTotal = subTotal + price0;
                 alert(subTotal);
             }else{
-                if(subTotal <= 0){
-                  price0 = 0;  
+                if(subTotal < 0){
+                  subTotal = 0;  
                 }else{
                     subTotal = subTotal - price0;
                 }
                 alert(subTotal);
             }
         }
-        function testButton1 (form){ alert (form.menu1.checked);}
-        function testButton2 (form){ alert (form.menu2.checked);}
-        function testButton3 (form){ alert (form.menu3.checked);}
-        function testButton4 (form){ alert (form.menu4.checked);}
-        function testButton5 (form){ alert (form.menu5.checked);}
-        function testButton6 (form){ alert (form.menu6.checked);}
-        function testButton7 (form){ alert (form.menu7.checked);}
-        function testButton8 (form){ alert (form.menu8.checked);}
-        function testButton9 (form){ alert (form.menu9.checked);}
-        function testButton10 (form){ alert (form.menu10.checked);}
-        function testButton11 (form){ alert (form.menu11.checked);}
-        function testButton12 (form){ alert (form.menu12.checked);}
-        function testButton13 (form){ alert (form.menu13.checked);}
-        function testButton14 (form){ alert (form.menu14.checked);}
-        function testButton15 (form){ alert (form.menu15.checked);}
-        function testButton16 (form){ alert (form.menu16.checked);}
-        function testButton17 (form){ alert (form.menu17.checked);}
-        function testButton18 (form){ alert (form.menu18.checked);}
-        function testButton19 (form){ alert (form.menu19.checked);}
-        function testButton20 (form){ alert (form.menu20.checked);}
-        function testButton21 (form){ alert (form.menu21.checked);}
-        function testButton22 (form){ alert (form.menu22.checked);}
-        function testButton23 (form){ alert (form.menu23.checked);}
-        function testButton24 (form){ alert (form.menu24.checked);}
-        function testButton25 (form){ alert (form.menu25.checked);}
-        function testButton26 (form){ alert (form.menu26.checked);}
+//        function testButton1 (form){ alert (form.menu1.checked);}
+//        function testButton2 (form){ alert (form.menu2.checked);}
+//        function testButton3 (form){ alert (form.menu3.checked);}
+//        function testButton4 (form){ alert (form.menu4.checked);}
+//        function testButton5 (form){ alert (form.menu5.checked);}
+//        function testButton6 (form){ alert (form.menu6.checked);}
+//        function testButton7 (form){ alert (form.menu7.checked);}
+//        function testButton8 (form){ alert (form.menu8.checked);}
+//        function testButton9 (form){ alert (form.menu9.checked);}
+//        function testButton10 (form){ alert (form.menu10.checked);}
+//        function testButton11 (form){ alert (form.menu11.checked);}
+//        function testButton12 (form){ alert (form.menu12.checked);}
+//        function testButton13 (form){ alert (form.menu13.checked);}
+//        function testButton14 (form){ alert (form.menu14.checked);}
+//        function testButton15 (form){ alert (form.menu15.checked);}
+//        function testButton16 (form){ alert (form.menu16.checked);}
+//        function testButton17 (form){ alert (form.menu17.checked);}
+//        function testButton18 (form){ alert (form.menu18.checked);}
+//        function testButton19 (form){ alert (form.menu19.checked);}
+//        function testButton20 (form){ alert (form.menu20.checked);}
+//        function testButton21 (form){ alert (form.menu21.checked);}
+//        function testButton22 (form){ alert (form.menu22.checked);}
+//        function testButton23 (form){ alert (form.menu23.checked);}
+//        function testButton24 (form){ alert (form.menu24.checked);}
+//        function testButton25 (form){ alert (form.menu25.checked);}
+//        function testButton26 (form){ alert (form.menu26.checked);}
     
     </script>
     
