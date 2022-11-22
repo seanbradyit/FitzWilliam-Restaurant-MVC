@@ -18,11 +18,11 @@
     <script>
         
         var subTotal = 0;
-        var price0 = b.SourcePrices(0);
+        var price0 = 2;
     
         function testButton0 (form){ 
             //alert (form.menu0.checked);
-            if(form.menu0.checked === true){
+            if(form.menu0.checked === true && subTotal >= 0){
                 subTotal = subTotal + price0;
                 alert(subTotal);
             }else{
