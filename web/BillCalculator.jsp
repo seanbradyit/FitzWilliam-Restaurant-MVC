@@ -22,11 +22,15 @@
     
         function testButton0 (form){ 
             //alert (form.menu0.checked);
-            if(form.menu0.checked === true && subTotal > 0){
+            if(form.menu0.checked === true){
                 subTotal = subTotal + price0;
                 alert(subTotal);
             }else{
-                subTotal = subTotal - price0;
+                if(subTotal <= 0){
+                  subTotal = 0;  
+                }else{
+                    subTotal = subTotal - price0;
+                }
                 alert(subTotal);
             }
         }
