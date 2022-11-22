@@ -22,17 +22,8 @@
     
         function testButton0 (form){ 
             //alert (form.menu0.checked);
-            if(form.menu0.checked === true){
-                subTotal = subTotal + price0;
-                alert(subTotal);
-            }else{
-                if(subTotal < 0){
-                  subTotal = 0;  
-                }else{
-                    subTotal = subTotal - price0;
-                }
-                alert(subTotal);
-            }
+            if(form.menu0.checked === true){subTotal = subTotal + price0;alert(subTotal);}else{
+                if(subTotal < 0){subTotal = 0;}else{subTotal = subTotal - price0;}alert(subTotal);}
         }
 //        function testButton1 (form){ alert (form.menu1.checked);}
 //        function testButton2 (form){ alert (form.menu2.checked);}
