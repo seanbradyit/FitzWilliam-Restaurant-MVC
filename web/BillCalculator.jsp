@@ -27,7 +27,7 @@
                 alert(subTotal);
             }else{
                 if(subTotal <= 0){
-                  subTotal = 0;  
+                  price0 = 0;  
                 }else{
                     subTotal = subTotal - price0;
                 }
