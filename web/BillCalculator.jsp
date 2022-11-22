@@ -19,13 +19,19 @@
         
         var subTotal = 0;
         var price0 = 2;
+        var price1 = 2;
     
         function testButton0 (form){ 
             //alert (form.menu0.checked);
             if(form.menu0.checked === true){subTotal = subTotal + price0;alert(subTotal);}else{
                 if(subTotal < 0){subTotal = 0;}else{subTotal = subTotal - price0;}alert(subTotal);}
         }
-//        function testButton1 (form){ alert (form.menu1.checked);}
+//      
+        function testButton1 (form){
+            if(form.menu1.checked === true){subTotal = subTotal + price1;alert(subTotal);}else{
+                if(subTotal < 0){subTotal = 0;}else{subTotal = subTotal - price1;}alert(subTotal);}
+        }
+//      
 //        function testButton2 (form){ alert (form.menu2.checked);}
 //        function testButton3 (form){ alert (form.menu3.checked);}
 //        function testButton4 (form){ alert (form.menu4.checked);}
