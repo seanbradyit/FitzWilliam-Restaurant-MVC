@@ -24,41 +24,7 @@ import java.util.ArrayList;
 @RequestScoped // declaration
 
 public class BillCalculator {
-    // JLabel for Restaurant
-   private String restaurantJLabel;
-   // JPanel to display waiter information
-   private String waiterJPanel;
-   // JLabel and JTextField for table number
-   private String tableNumberJLabel;
-   private String tableNumberJTextField;
-   // JLabel and JTextField for waiter name
-   private String waiterNameJLabel;
-   private String waiterNameJTextField;
-   // JPanel to display menu items
-   private String menuItemsJPanel;
-   // JLabel and JComboBox for beverage
-   private String beverageJLabel;
-   //TODO private RADIOselection beverageJComboBox; !!!!!!!!!!!!!
-   // JLabel and JComboBox for appetizer
-   private String appetizerJLabel;
-   //TODO private RADIOselection appetizerJComboBox; !!!!!!!!!!!!!
-   // JLabel and JComboBox for main course
-   private String mainCourseJLabel;
-   //TODO private RADIOselection mainCourseJComboBox; !!!!!!!!!!!!!
-   // JLabel and JComboBox for dessert
-   private String dessertJLabel;
-   //TODO private RADIOselection dessertJComboBox; !!!!!!!!!!!!!
-   // JButton for calculate bill
-   //TODO private BUTTONselection calculateBillJButton; !!!!!!!!!!
-   // JLabel and JTextField for subtotal
-   private String subtotalJLabel;
-   private String subtotalJTextField;
-   // JLabel and JTextField for tax
-   private String taxJLabel;
-   private String taxJTextField;
-   // JLabel and JTextField for total
-   private String totalJLabel;
-   private String totalJTextField;
+
    
    // constant for tax rate
    private final static double TAX_RATE = 0.05;
@@ -114,79 +80,7 @@ public class BillCalculator {
    
    public String SourcePrices(int index)
    {
-       //return menuItems;
-       //for(int i = 0; i < 28; i++){
-           //System.out.println("Menu entry... " + menuItems.get(i));
-           return billItems.get(index);
-       //}
-       //return null;
+       return billItems.get(index);
    }
-   
-   // **** TODO ****** set up waiterJPanel
-   private void createWaiterJPanel()
-   {
-       
-   }
-   
-   // **** TODO ****** create menuItemsJPanel
-   private void createMenuItemsJPanel()
-   {
-       
-   }
-   
-   // **** TODO ****** add items to JComboBox
-   private void loadCategory(
-      String category, String categoryJComboBox )
-   {
-            
-   }
-   
-   // **** TODO ****** user select beverage
-   private void beverageJComboBoxItemStateChanged( /*ItemEvent event*/ )
-   {
-      
-   }
-   
-   // **** TODO ****** user select appetizer
-   private void appetizerJComboBoxItemStateChanged( /*ItemEvent event*/ )
-   {
-      
-   }
-   
-   // **** TODO ****** user select main course
-   private void mainCourseJComboBoxItemStateChanged( /*ItemEvent event*/ )
-   {
-      
-   }
-   
-   // **** TODO ****** user select dessert
-   private void dessertJComboBoxItemStateChanged( /*ItemEvent event*/ )
-   {
-      
-   }
-   
-   // **** TODO ****** user click Calculate Bill JButton
-   private void calculateBillJButtonActionPerformed( /*ActionEvent event*/ )
-   {
-      
-   }
-   
-   // **** TODO ****** calculate subtotal
-   private double calculateSubtotal()
-   {
-      return 0;
-
-   }
-   
-   // **** TODO ****** user close window
-   private void frameWindowClosing( /*WindowEvent event*/ )
-   {
-      
-   }
-   
-   // **** TODO ****** method main translated to already in use app. !!!!!!!!!!
-   // **** TODO ****** check command-line arguments
-   // **** TODO ****** get command-line arguments
-   // **** TODO ****** create new RestaurantBillCalculator
    
 }
