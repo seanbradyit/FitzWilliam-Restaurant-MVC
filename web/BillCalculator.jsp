@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Restaurant Bill Calculator</title>
+        <title>Customer Bill Calculations</title>
     </head>
     
     
