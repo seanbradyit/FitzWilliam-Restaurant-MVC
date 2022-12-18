@@ -66,7 +66,7 @@ public class RestaurantMenu extends HttpServlet { // class created which uses th
             out.println("<html xmlns = \"http://www.w3.org/1999/xhtml\">");
             out.println("<head>");
             out.println("<div style=\"border: 1px solid black;\">");
-            out.println("<jsp:include page=\"header.jsp\" />");
+            out.println("<jsp:include page=\"http://localhost:8084/header.jsp\" />");
             out.println("</div>");
             // END -- Creating required HTML top portion
              
@@ -180,7 +180,7 @@ public class RestaurantMenu extends HttpServlet { // class created which uses th
             out.println("<html xmlns = \"http://www.w3.org/1999/xhtml\">");
             out.println("<head>"); 
             out.println("<div style=\"border: 1px solid black;\">");
-            out.println("<jsp:include page=\"header.jsp\" />");
+            out.println("<jsp:include page=\"http://localhost:8084/header.jsp\" />");
             out.println("</div>");
             // END -- Creating required HTML top portion
              
