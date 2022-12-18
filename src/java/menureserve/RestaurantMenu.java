@@ -65,9 +65,9 @@ public class RestaurantMenu extends HttpServlet { // class created which uses th
                     "/TR/xhtml1/DTD/xhtml1-strict.dtd\">");
             out.println("<html xmlns = \"http://www.w3.org/1999/xhtml\">");
             out.println("<head>");
-            out.println("<div style=\"border: 1px solid black;\">");
-            out.println("<jsp:include page=\"http://localhost:8084/header.jsp\" />");
-            out.println("</div>");
+            //out.println("<div style=\"border: 1px solid black;\">");
+            //out.println("<jsp:include page=\"http://localhost:8084/header.jsp\" />");
+            //out.println("</div>");
             // END -- Creating required HTML top portion
              
             try {
@@ -135,11 +135,11 @@ public class RestaurantMenu extends HttpServlet { // class created which uses th
                 ///out.println("<label><input type = \"submit\" value = \"Yes\" /></label>");  // Button to initialise the transfer...
                 ///out.println("</form>");                                                     // End of prompt
                 out.println("</pre><body>");
-                out.println("<footer>");
-                out.println("<div style=\"border: 1px solid black;\">");
-                out.println("<jsp:include page=\"footer.jsp\" />");
-                out.println("</div>");
-                out.println("</footer>");
+                //out.println("<footer>");
+                //out.println("<div style=\"border: 1px solid black;\">");
+                //out.println("<jsp:include page=\"footer.jsp\" />");
+                //out.println("</div>");
+                //out.println("</footer>");
                 out.println("</html>"); // end HTML doc
                 out.close(); // close I/O post response writer
                 // END -- Creating required HTML bottom portion
@@ -179,9 +179,9 @@ public class RestaurantMenu extends HttpServlet { // class created which uses th
                     "/TR/xhtml1/DTD/xhtml1-strict.dtd\">");
             out.println("<html xmlns = \"http://www.w3.org/1999/xhtml\">");
             out.println("<head>"); 
-            out.println("<div style=\"border: 1px solid black;\">");
-            out.println("<jsp:include page=\"http://localhost:8084/header.jsp\" />");
-            out.println("</div>");
+            //out.println("<div style=\"border: 1px solid black;\">");
+            //out.println("<jsp:include page=\"http://localhost:8084/header.jsp\" />");
+            //out.println("</div>");
             // END -- Creating required HTML top portion
              
             try {
@@ -249,11 +249,11 @@ public class RestaurantMenu extends HttpServlet { // class created which uses th
                 //out.println("<label><input type = \"submit\" value = \"Yes\" /></label>");  // Button to initialise the transfer...
                 //out.println("</form>");                                                     // End of prompt
                 out.println("</pre><body>");
-                out.println("<footer>");
-                out.println("<div style=\"border: 1px solid black;\">");
-                out.println("<jsp:include page=\"footer.jsp\" />");
-                out.println("</div>");
-                out.println("</footer>");
+                //out.println("<footer>");
+                //out.println("<div style=\"border: 1px solid black;\">");
+                //out.println("<jsp:include page=\"footer.jsp\" />");
+                //out.println("</div>");
+                //out.println("</footer>");
                 out.println("</html>"); // end HTML doc
                 out.close(); // close I/O post response writer
                 // END -- Creating required HTML bottom portion
