@@ -11,6 +11,9 @@
 
 <html>
     <head>
+        <div style="border: 1px solid black;">
+            <jsp:include page="header.jsp" />
+        </div>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Customer Bill Calculations</title>
     </head>
@@ -166,4 +169,9 @@
                                     </script>
                                     
     </body>
+    <footer>
+            <div style="border: 1px solid black;">
+            <jsp:include page="footer.jsp" />
+            </div>
+    </footer>
 </html>
