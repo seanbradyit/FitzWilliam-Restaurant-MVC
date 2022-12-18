@@ -48,10 +48,7 @@
                     <%
                 }
                 %>
-                
-                <jsp:include page="Footer.jsp" />
     
     <body>
-        
     </body>
 </html>
