@@ -45,6 +45,9 @@
 
 <%-- META data for HTML head and formatting, plus page title with CSS text size formatting --%> 
 	<head>
+            <div style="border: 1px solid black;">
+            <jsp:include page="header.jsp" />
+            </div>
 		<meta http-equiv = "refresh" content = "60" />
 		<title> Restaurant Login Page </title>
 		<style type = "text/css">
@@ -103,10 +106,8 @@
         %>
         </body>
         <footer>
-            <h3>Footer...</h3>
-            <div style="border: 2px solid black;">
-            <c:import var="footerjsp" url="/footer.jsp" />
-            <c:out value="${footerjsp}" escapeXml="false" />
+            <div style="border: 1px solid black;">
+            <jsp:include page="footer.jsp" />
             </div>
         </footer>
 

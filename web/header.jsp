@@ -12,6 +12,6 @@
         <title>Header</title>
     </head>
     <body>
-        <h1>This is my header</h1>
+        <h4>This is my header</h4>
     </body>
 </html>

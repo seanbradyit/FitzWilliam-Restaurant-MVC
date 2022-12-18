@@ -12,6 +12,6 @@
         <title>Footer</title>
     </head>
     <body>
-        <h1>This is my footer</h1>
+        <h4>This is my footer</h4>
     </body>
 </html>
