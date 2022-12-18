@@ -103,7 +103,6 @@
         %>
         </body>
         <footer>
-            <footer>
             <h3>Footer...</h3>
             <div style="border: 2px solid black;">
             <c:import var="footerjsp" url="/footer.jsp" />
