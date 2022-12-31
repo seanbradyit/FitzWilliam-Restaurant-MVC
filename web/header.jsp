@@ -13,6 +13,6 @@
     </head>
     <body>
         <h4>This is my header</h4>
-        <img src="logo-diner.png">
+        <img src="http://localhost:8084/Restaurant/logo-diner.png">
     </body>
 </html>
