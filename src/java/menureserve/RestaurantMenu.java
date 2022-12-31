@@ -65,6 +65,8 @@ public class RestaurantMenu extends HttpServlet { // class created which uses th
                     "/TR/xhtml1/DTD/xhtml1-strict.dtd\">");
             out.println("<html xmlns = \"http://www.w3.org/1999/xhtml\">");
             out.println("<head>");
+            out.println("<p style=\"color:rgba(255,0,0,1);\"><b>Mario's Munchies Restaurant</b></p>");
+            out.println("<img src=\"logo-diner.png\" width=\"60\" height=\"60\">");
             //out.println("<div style=\"border: 1px solid black;\">");
             //out.println("<jsp:include page=\"http://localhost:8084/header.jsp\" />");
             //out.println("</div>");
@@ -178,7 +180,9 @@ public class RestaurantMenu extends HttpServlet { // class created which uses th
                     "XHTML 1.0 Strict//EN\" \"http://w3.org" + 
                     "/TR/xhtml1/DTD/xhtml1-strict.dtd\">");
             out.println("<html xmlns = \"http://www.w3.org/1999/xhtml\">");
-            out.println("<head>"); 
+            out.println("<head>");
+            out.println("<p style=\"color:rgba(255,0,0,1);\"><b>Mario's Munchies Restaurant</b></p>");
+            out.println("<img src=\"logo-diner.png\" width=\"60\" height=\"60\">");
             //out.println("<div style=\"border: 1px solid black;\">");
             //out.println("<jsp:include page=\"http://localhost:8084/header.jsp\" />");
             //out.println("</div>");
