@@ -17,7 +17,6 @@
         <a href="BillCalculator.jsp">Restaurant Bill Calculator</a><br>
         <a href="http://localhost:8084/Reservation.jsp">Restaurant Reservations</a><br>
         <a href="http://localhost:8084/RestaurantMenu/Menu">Menu</a><br>
-        <a href="default.jsp">Logout</a><br>
         </div>
     </body>
 </html>
