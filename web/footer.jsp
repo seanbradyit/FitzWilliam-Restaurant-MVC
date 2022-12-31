@@ -12,7 +12,7 @@
         <title>Footer</title>
     </head>
     <body>
-        <h4>This is my footer</h4>
+        <p style="color:rgba(255,0,0,1);"><b>Mario's Munchies Restaurant</b></p>
         <img src="logo-diner.png" width="60" height="60">
     </body>
 </html>
