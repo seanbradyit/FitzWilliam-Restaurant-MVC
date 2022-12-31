@@ -13,6 +13,6 @@
     </head>
     <body>
         <h4>This is my footer</h4>
-        <img src="/Images/logo-diner.png">
+        <img src="/Images/logo-diner.png" width="50" height="60">
     </body>
 </html>
