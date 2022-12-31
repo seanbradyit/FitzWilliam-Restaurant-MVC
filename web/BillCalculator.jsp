@@ -168,10 +168,11 @@
 
                                     </script>
                                     
+        <div style="border: 1px solid black;">
+            <jsp:include page="footer.jsp" />
+        </div>
     </body>
     <footer>
-            <div style="border: 1px solid black;">
-            <jsp:include page="footer.jsp" />
-            </div>
+            
     </footer>
 </html>
