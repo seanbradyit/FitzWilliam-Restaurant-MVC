@@ -139,11 +139,12 @@ public class RestaurantMenu extends HttpServlet { // class created which uses th
                 ///out.println("<label><input type = \"submit\" value = \"Yes\" /></label>");  // Button to initialise the transfer...
                 ///out.println("</form>");                                                     // End of prompt
                 out.println("</pre><body>");
-                //out.println("<footer>");
-                //out.println("<div style=\"border: 1px solid black;\">");
-                //out.println("<jsp:include page=\"footer.jsp\" />");
-                //out.println("</div>");
-                //out.println("</footer>");
+                out.println("<footer>");
+                out.println("<div style=\"border: 1px solid black;\">");
+                out.println("<p style=\"color:rgba(255,0,0,1);\"><b>Mario's Munchies Restaurant</b></p>");
+                out.println("<img src=\"logo-diner.png\" width=\"60\" height=\"60\">");
+                out.println("</div>");
+                out.println("</footer>");
                 out.println("</html>"); // end HTML doc
                 out.close(); // close I/O post response writer
                 // END -- Creating required HTML bottom portion
@@ -257,11 +258,12 @@ public class RestaurantMenu extends HttpServlet { // class created which uses th
                 //out.println("<label><input type = \"submit\" value = \"Yes\" /></label>");  // Button to initialise the transfer...
                 //out.println("</form>");                                                     // End of prompt
                 out.println("</pre><body>");
-                //out.println("<footer>");
-                //out.println("<div style=\"border: 1px solid black;\">");
-                //out.println("<jsp:include page=\"footer.jsp\" />");
-                //out.println("</div>");
-                //out.println("</footer>");
+                out.println("<footer>");
+                out.println("<div style=\"border: 1px solid black;\">");
+                out.println("<p style=\"color:rgba(255,0,0,1);\"><b>Mario's Munchies Restaurant</b></p>");
+                out.println("<img src=\"logo-diner.png\" width=\"60\" height=\"60\">");
+                out.println("</div>");
+                out.println("</footer>");
                 out.println("</html>"); // end HTML doc
                 out.close(); // close I/O post response writer
                 // END -- Creating required HTML bottom portion
